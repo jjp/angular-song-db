@@ -5,6 +5,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+### Docker based development
+
+Build environment: `docker-compose build`
+
+Run service: `docker-compose up [-d]` you can background the job by using `-d` flag
+
+Run `ng` commands if service is up: `docker-compose exec ng help`  Note that this directory is mounted into container so you can change code live.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
