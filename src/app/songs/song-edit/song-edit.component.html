@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-xs-12">
+
+    <form [formGroup]="songForm" (ngSubmit)="onSubmit()">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <button
+            type="submit"
+            class="btn btn-success"
+            [disabled]="!songForm.valid">Save</button>
+          <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+        </div>
+      </div>
+
+      <div>
+
+      <h3>Title: </h3>
+      <h4>Key: </h4>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="iRealHtml">iReal Pro Html</label>
+            <input
+              type="text"
+              id="iRealHtml"
+              formControlName="iRealHtml"
+              class="form-control"
+              #iRealHtml>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          JSON:<br/>{{ iRealJSON | json }}
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+</div>

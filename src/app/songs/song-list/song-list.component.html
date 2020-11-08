@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="onNewSong()">New Song</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <app-song-item
+      *ngFor="let songInstance of songs; let i = index"
+      [song]="songInstance"
+      [index]="i"></app-song-item>
+  </div>
+</div>
